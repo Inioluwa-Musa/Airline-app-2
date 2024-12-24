@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 id="baF">Book a Flight</h1>
+<p>Current Balance: ${{ balance }}</p>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name(class="in-form-el", id="depamin", placeholder="Enter your name...") }}<br>
+    {{ form.flightnumber.label }} {{ form.flightnumber(class="in-form-el", id="flinumfr") }}<br>
+    {{ form.submit(id="depos") }}
+</form>
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,53 @@
+body {
+    margin: auto;
+    max-width: 500px;
+    box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.3);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    border-radius: 10px;
+}
+
+#baF {
+    text-align: center;
+}
+
+#depos {
+    border: none;
+    color: white;
+    background-color: rgb(0, 212, 0) !important;
+    border-radius: 5px; /* Add padding for size */
+    font-size: 16px;    /* Ensure text is readable */
+    cursor: pointer;    /* Add pointer cursor for interactivity */
+    margin-bottom: 10px;
+}
+
+form, p {
+    margin-left: 10px;
+}
+
+#depos:hover {
+    background-color: rgb(0, 119, 0); /* Slightly darker green on hover */
+    transition: background-color 0.5s ease; /* Smooth transition */
+}
+
+#depos:focus {
+    box-shadow: 0px 0px 10px rgba(0, 212, 0, 0.9);
+}
+
+#depamin:focus {
+    box-shadow: 0px 0px 10px rgb(0, 174, 255);
+    transition: box-shadow 0.5s ease;
+}
+
+.in-form-el {
+    margin-bottom: 10px;
+}
+
+#flinumfr, #depamin {
+    border: 0.05px solid black;
+    border-radius: 4px;
+}
+
+#flinumfr {
+    border: 0.05px solid black;
+    border-radius: 4px;
+}

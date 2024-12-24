@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 id="baF">Deposit Funds</h1>
+<p>Current Balance: ${{ balance }}</p>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.deposit_amount.label }} {{ form.deposit_amount(id="depamin", class="in-form-el") }}<br>
+    {{ form.deposit(id="depos") }}
+</form>
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+{% endblock %}
